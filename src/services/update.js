@@ -6,7 +6,7 @@ const connection = require('../database/config');
 const upload = multer({
   storage: multer.diskStorage({
     destination: (req, file, cb) => {
-      const uploadDir = path.join(__dirname, '..', 'photos');
+      const uploadDir = path.join(__dirname, '../../', 'public', 'photos');
       if (!fs.existsSync(uploadDir)) {
         fs.mkdirSync(uploadDir, { recursive: true });
       }

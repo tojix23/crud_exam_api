@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const connection = require('../database/config');
 
-const uploadDir = path.join(__dirname, '..','photos'); 
+const uploadDir = path.join(__dirname, '../../', 'public', 'photos');
 
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true }); 
